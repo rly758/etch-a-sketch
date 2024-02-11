@@ -1,6 +1,6 @@
 # etch-a-sketch
 
 Features to consider adding in the future:
-- adjustable grid size
 - eraser
+- rainbow paint mode
 - general css for aesthetics
