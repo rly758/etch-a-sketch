@@ -1,4 +1,5 @@
 const DEFAULT_SIZE = 16;
+const MAX_SIZE = 100;
 const DEFAULT_COLOR = "black";
 
 const container = document.querySelector("#container"); //container holding rows of pixels
@@ -10,6 +11,7 @@ const resetBtn = document.querySelector("#reset");
 row.classList.add("row")
 pixel.classList.add("pixel");
 
+//reset button
 resetBtn.addEventListener("click", clearGrid);
 
 //for the "click-and-drag" behavior of drawing
@@ -20,6 +22,19 @@ document.body.onmousedown = () => mouseDown = true;
 //default grid size of 16x16 pixels
 let size = DEFAULT_SIZE;
 let pixelColor = DEFAULT_COLOR;
+
+//adjustable grid size
+
+
+//paint color selector
+const paintPicker = document.querySelector("#paint");
+paintPicker.addEventListener("change", (event) => {pixelColor = event.target.value})
+paintPicker.select(); 
+
+//rainbow mode paint
+
+
+//eraser
 
 function createGrid() {
     //fill a single row with pixels
